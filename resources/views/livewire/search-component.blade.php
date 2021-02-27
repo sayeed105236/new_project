@@ -6,7 +6,7 @@
     <div class="wrap-breadcrumb">
       <ul>
         <li class="item-link"><a href="/" class="link">home</a></li>
-        <li class="item-link"><span>SHOP</span></li>
+        <li class="item-link"><span>Search</span></li>
       </ul>
     </div>
     <div class="row">
@@ -55,6 +55,7 @@
           </div>
 
         </div><!--end wrap shop control-->
+        @if($products->count()>0)
 
         <div class="row">
 
@@ -83,6 +84,9 @@
           </ul>
 
         </div>
+        @else
+        <p style="padding-top:30px;">No Products</p>
+        @endif
 
         <div class="wrap-pagination-info">
         {{$products->links()}}
