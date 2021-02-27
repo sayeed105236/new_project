@@ -9,6 +9,8 @@ use App\Http\Livewire\CategoryComponent;
 use App\Http\Livewire\SearchComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
+use App\Http\Livewire\Admin\AdminCategoryComponent;
+use App\Http\Livewire\Admin\AdminAddCategoryComponent;
 
 use App\Http\Livewire\CheckoutComponent;
 
@@ -45,12 +47,15 @@ Route::get('/search',SearchComponent::class)->name('product.search');
 
 //For User or Customer
 Route::middleware(['auth:sanctum','verified'])->group(function(){
- Route::get('user/dashboard',UserDashboardComponent::class)->name('user.dashboard');
+Route::get('user/dashboard',UserDashboardComponent::class)->name('user.dashboard');
 
 });
 
 //For admin
 Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
-  Route::get('/admin/dashboard',AdminDashboardComponent::class)->name('admin.dashboard');
+Route::get('/admin/dashboard',AdminDashboardComponent::class)->name('admin.dashboard');
+Route::get('/admin/categories',AdminCategoryComponent::class)->name('admin.categories');
+Route::get('/admin/categories/add',AdminAddCategoryComponent::class)->name('admin.addcategory');
+
 
 });
