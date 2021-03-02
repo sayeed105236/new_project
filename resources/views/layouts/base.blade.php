@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Home</title>
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/images/favicon.ico')}}">
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic,900,900italic&amp;subset=latin,latin-ext" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open%20Sans:300,400,400italic,600,600italic,700,700italic&amp;subset=latin,latin-ext" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/animate.css')}}">
@@ -16,7 +17,13 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/chosen.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/color-01.css')}}">
+	<link href="{{asset('assets/css/select2.min.css')}}" rel="stylesheet" />
+
+
+
   @livewireStyles
+
+	@stack('scripts')
 </head>
 <body class="home-page home-01 ">
 
@@ -87,6 +94,10 @@
 																</li>
 																<li class="menu-item">
 																	<a title="manage Home Slider " href="{{route('admin.homeslider')}}">Manage Home Slider</a>
+
+																</li>
+																<li class="menu-item">
+																	<a title="manage Home Category" href="{{route('admin.homecategories')}}">Manage Home Categories</a>
 
 																</li>
 														<li class="menu-item">
@@ -475,7 +486,7 @@
 			</div>
 		</div>
 	</footer>
-
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 	<script src="{{asset('assets/js/jquery-1.12.4.minb8ff.js?ver=1.12.4')}}"></script>
 	<script src="{{asset('assets/js/jquery-ui-1.12.4.minb8ff.js?ver=1.12.4')}}"></script>
 	<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
@@ -485,6 +496,8 @@
 	<script src="{{asset('assets/js/jquery.countdown.min.js')}}"></script>
 	<script src="{{asset('assets/js/jquery.sticky.js')}}"></script>
 	<script src="{{asset('assets/js/functions.js')}}"></script>
+	<script src="{{asset('asssets/js/select2.min.js')}}"></script>
+
   @livewireScripts
 </body>
 </html>

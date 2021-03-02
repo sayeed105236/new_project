@@ -44,7 +44,7 @@
                 <div class="form-group">
                   <label class="col-md-4 control-label">Price</label>
                   <div class="col-md-4">
-                    <input type="number" class="form-control input-md" placeholder="Price" wire:model="price" />
+                    <input type="text" class="form-control input-md" placeholder="Price" wire:model="price" />
 
                   </div>
 
@@ -58,7 +58,7 @@
 
                 </div>
                 <div class="form-group">
-                  <label class="col-md-4 control-label">Image</label>
+                  <label class="col-md-4 control-label">Image (1170*500)</label>
                   <div class="col-md-4">
                     <input type="file" class="input-file" name="" value="" wire:model="image"/>
                     @if($image)
