@@ -105,6 +105,10 @@
 																	<a title="sale Setting" href="{{route('admin.sale')}}">Sale Setting</a>
 
 																</li>
+																<li class="menu-item">
+																	<a title="manage Home Banner1 " href="{{route('admin.homebanner1')}}">Manage Home Banner1</a>
+
+																</li>
 														<li class="menu-item">
 															<a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
 

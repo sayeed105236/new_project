@@ -21,16 +21,15 @@
 
     <!--BANNER-->
     <div class="wrap-banner style-twin-default">
+        @foreach($homebanners1 as $homebanner1)
       <div class="banner-item">
-        <a href="#" class="link-banner banner-effect-1">
-          <figure><img src="{{asset('assets/images/home-1-banner-1.jpg')}}" alt="" width="580" height="190"></figure>
+
+        <a href="{{$homebanner1->link}}" class="link-banner banner-effect-1">
+          <figure><img src="{{asset('assets/images/homebanners')}}/{{$homebanner1->image}}" alt="" width="580" height="190"></figure>
         </a>
       </div>
-      <div class="banner-item">
-        <a href="#" class="link-banner banner-effect-1">
-          <figure><img src="{{asset('assets/images/home-1-banner-2.jpg')}}" alt="" width="580" height="190"></figure>
-        </a>
-      </div>
+        @endforeach
+
     </div>
 
     <!--On Sale-->

@@ -20,6 +20,9 @@ use App\Http\Livewire\Admin\AdminAddHomeSliderComponent;
 use App\Http\Livewire\Admin\AdminEditHomeSliderComponent;
 use App\Http\Livewire\Admin\AdminHomeCategoryComponent;
 use App\Http\Livewire\Admin\AdminSaleComponent;
+use App\Http\Livewire\Admin\AdminHomeBanner1Component;
+use App\Http\Livewire\Admin\AdminAddHomeBanner1Component;
+use App\Http\Livewire\Admin\AdminEditHomeBanner1Component;
 
 use App\Http\Livewire\CheckoutComponent;
 
@@ -73,6 +76,9 @@ Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
       Route::get('/admin/slider/add',AdminAddHomeSliderComponent::class)->name('admin.addhomeslider');
       Route::get('/admin/slider/edit/{slider_id}',AdminEditHomeSliderComponent::class)->name('admin.edithomeslider');
       Route::get('/admin/home/categories',AdminHomeCategoryComponent::class)->name('admin.homecategories');
-        Route::get('/admin/sale',AdminSaleComponent::class)->name('admin.sale');
+      Route::get('/admin/sale',AdminSaleComponent::class)->name('admin.sale');
+      Route::get('/admin/homebanner1',AdminHomeBanner1Component::class)->name('admin.homebanner1');
+      Route::get('/admin/homebanner1/add',AdminAddHomeBanner1Component::class)->name('admin.addhomebanner1');
+      Route::get('/admin/homebanner1/edit/{homebanner1_id}',AdminEditHomeBanner1Component::class)->name('admin.edithomebanner1');
 
 });
